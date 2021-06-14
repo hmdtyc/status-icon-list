@@ -1,0 +1,41 @@
+<design:component >
+    <design:attribute name="title" label="Title"/>
+    <design:attribute name="titleIcon" label="Title Icon"/>
+    <design:attribute name="iconNumForRow" label="Number of Icons for One Row" default="6" required="true"/>
+    <design:attribute name="item01Name" label="Item 1 Name"/>
+    <design:attribute name="item01Icon" label="Item 1 Icon" />
+    <design:attribute name="item01StatusField" label="Item 1 Status Field"/>
+    <design:attribute name="item02Name" label="Item 2 Name"/>
+    <design:attribute name="item02Icon" label="Item 2 Icon" />
+    <design:attribute name="item02StatusField" label="Item 2 Status Field"/>
+    <design:attribute name="item03Name" label="Item 3 Name"/>
+    <design:attribute name="item03Icon" label="Item 3 Icon" />
+    <design:attribute name="item03StatusField" label="Item 3 Status Field"/>
+    <design:attribute name="item04Name" label="Item 4 Name"/>
+    <design:attribute name="item04Icon" label="Item 4 Icon" />
+    <design:attribute name="item04StatusField" label="Item 4 Status Field"/>
+    <design:attribute name="item05Name" label="Item 5 Name"/>
+    <design:attribute name="item05Icon" label="Item 5 Icon" />
+    <design:attribute name="item05StatusField" label="Item 5 Status Field"/>
+    <design:attribute name="item06Name" label="Item 6 Name"/>
+    <design:attribute name="item06Icon" label="Item 6 Icon" />
+    <design:attribute name="item06StatusField" label="Item 6 Status Field"/>
+    <design:attribute name="item07Name" label="Item 7 Name"/>
+    <design:attribute name="item07Icon" label="Item 7 Icon" />
+    <design:attribute name="item07StatusField" label="Item 7 Status Field"/>
+    <design:attribute name="item08Name" label="Item 8 Name"/>
+    <design:attribute name="item08Icon" label="Item 8 Icon" />
+    <design:attribute name="item08StatusField" label="Item 8 Status Field"/>
+    <design:attribute name="item09Name" label="Item 9 Name"/>
+    <design:attribute name="item09Icon" label="Item 9 Icon" />
+    <design:attribute name="item09StatusField" label="Item 9 Status Field"/>
+    <design:attribute name="item10Name" label="Item 10 Name"/>
+    <design:attribute name="item10Icon" label="Item 10 Icon" />
+    <design:attribute name="item10StatusField" label="Item 10 Status Field"/>
+    <design:attribute name="item11Name" label="Item 11 Name"/>
+    <design:attribute name="item11Icon" label="Item 11 Icon" />
+    <design:attribute name="item11StatusField" label="Item 11 Status Field"/>
+    <design:attribute name="item12Name" label="Item 12 Name"/>
+    <design:attribute name="item12Icon" label="Item 12 Icon" />
+    <design:attribute name="item12StatusField" label="Item 12 Status Field"/>
+</design:component>

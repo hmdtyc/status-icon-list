@@ -1,0 +1,30 @@
+.THIS .card-title{
+    display: flex;
+    align-items: center;
+}
+.THIS .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.THIS .title-icon img{
+    max-width: 24px;
+    max-height: 24px;
+}
+.THIS .item .icon .icon-color {
+    background-color: var(--sds-c-button-brand-color-background, var(--lwc-brandAccessible,rgb(0, 112, 210)))!important;
+}
+.THIS .item.disabled .icon lightning-icon.icon-color {
+    background-color: #c9c7c5 !important;
+    border-color: #c9c7c5 !important;
+    color: #fff !important;
+}
+.THIS .item .icon img{
+    max-width: 32px;
+    max-height: 32px;
+}
+.THIS .item.disabled .icon img{
+    opacity: 0.5;
+}
+.THIS .item.disabled .name{
+    color: #9e9e9e;
+}

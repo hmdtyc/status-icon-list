@@ -1,0 +1,102 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="fields" type="String[]" default="[]" />
+    <aura:attribute name="error" type="String" />
+    <aura:attribute name="items" type="Object[]"/>
+    <aura:attribute name="itemsLoaded" type="Boolean" default="false" />
+    <aura:attribute name="isTitleIconTypeSLDS" type="Boolean" default="true" />
+    
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="titleIcon" type="String" />
+    <aura:attribute name="iconNumForRow" type="Integer" default="6"/>
+    <aura:attribute name="item01Name" type="String"/>
+    <aura:attribute name="item01Icon" type="String"/>
+    <aura:attribute name="item01StatusField" type="String"/>
+    <aura:attribute name="item02Name" type="String"/>
+    <aura:attribute name="item02Icon" type="String"/>
+    <aura:attribute name="item02StatusField" type="String"/>
+    <aura:attribute name="item03Name" type="String"/>
+    <aura:attribute name="item03Icon" type="String"/>
+    <aura:attribute name="item03StatusField" type="String"/>
+    <aura:attribute name="item04Name" type="String"/>
+    <aura:attribute name="item04Icon" type="String"/>
+    <aura:attribute name="item04StatusField" type="String"/>
+    <aura:attribute name="item05Name" type="String"/>
+    <aura:attribute name="item05Icon" type="String"/>
+    <aura:attribute name="item05StatusField" type="String"/>
+    <aura:attribute name="item06Name" type="String"/>
+    <aura:attribute name="item06Icon" type="String"/>
+    <aura:attribute name="item06StatusField" type="String"/>
+    <aura:attribute name="item07Name" type="String"/>
+    <aura:attribute name="item07Icon" type="String"/>
+    <aura:attribute name="item07StatusField" type="String"/>
+    <aura:attribute name="item08Name" type="String"/>
+    <aura:attribute name="item08Icon" type="String"/>
+    <aura:attribute name="item08StatusField" type="String"/>
+    <aura:attribute name="item09Name" type="String"/>
+    <aura:attribute name="item09Icon" type="String"/>
+    <aura:attribute name="item09StatusField" type="String"/>
+    <aura:attribute name="item10Name" type="String"/>
+    <aura:attribute name="item10Icon" type="String"/>
+    <aura:attribute name="item10StatusField" type="String"/>
+    <aura:attribute name="item11Name" type="String"/>
+    <aura:attribute name="item11Icon" type="String"/>
+    <aura:attribute name="item11StatusField" type="String"/>
+    <aura:attribute name="item12Name" type="String"/>
+    <aura:attribute name="item12Icon" type="String"/>
+    <aura:attribute name="item12StatusField" type="String"/>
+
+    <aura:html tag="style">
+        .item {
+            width: calc(100% / {!v.iconNumForRow});
+            text-align: center;
+            margin-top: .5rem;
+        }
+   </aura:html>
+
+    <aura:if isTrue="{!v.fields.length != 0}">
+    <force:recordData aura:id="recordLoader"
+        recordId="{!v.recordId}"
+        fields="{!v.fields}"
+        targetFields="{!v.record}"
+        targetError="{!v.error}"
+        recordUpdated="{!c.recordUpdated}"/>
+    </aura:if>
+
+    <lightning:card>
+        <aura:set attribute="title">
+            <div class="card-title">
+                <span class="title-icon slds-m-right_x-small">
+                    <aura:if isTrue="{!v.isTitleIconTypeSLDS}">
+                        <lightning:icon iconName="{!v.titleIcon}" size="small"/>
+                    </aura:if>
+                    <aura:if isTrue="{!!v.isTitleIconTypeSLDS}">
+                        <img src="{!v.titleIcon}"/>
+                    </aura:if>
+                </span>
+                <span>{!v.title}</span>
+            </div>
+        </aura:set>
+        <aura:if isTrue="{!v.itemsLoaded}">
+            <div class="wrapper">
+            <aura:iteration items="{!v.items}" var="item" indexVar="idx">
+                <div class="{!item.disabled ? 'item disabled' : 'item'}">
+                    <div class="icon">
+                        <aura:if isTrue="{!item.iconType == 'static'}">
+                            <img src="{!item.icon}"/>
+                        </aura:if>
+                        <aura:if isTrue="{!item.iconType == 'slds'}">
+                            <lightning:icon iconName='{!item.icon}' size="medium" variant="brand" class="icon-color" />
+                        </aura:if>
+                    </div>
+                    <div class="name slds-m-top_xx-small">
+                        {!item.name}
+                    </div>
+                </div>
+            </aura:iteration>
+            </div>
+        </aura:if>
+    </lightning:card>
+</aura:component>	
